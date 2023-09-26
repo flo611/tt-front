@@ -1,7 +1,6 @@
 import "@/app/assets/css/styles.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import PostProvider from "@/app/components/context/postProvider";
+import UserProvider from "@/app/components/context/userProvider";
 
 export const metadata = {
   title: "TT-FRONTEND",
@@ -11,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={inter.className}>{children}</body>
+      <UserProvider>
+        <PostProvider>
+          <body className={""}>{children}</body>
+        </PostProvider>
+      </UserProvider>
     </html>
   );
 }

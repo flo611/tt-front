@@ -1,11 +1,12 @@
 import Main from "@/app/components/layouts/main";
+import ShowPosts from "./sections/showPosts";
 
 const Home = () => {
-    return (
+  return (
         <Main>
-            <h1>sqd</h1>
+          <ShowPosts />
         </Main>
-    )
-}
+  );
+};
 
 export default Home;
