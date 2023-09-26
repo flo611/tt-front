@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Test Technique - Front
 
-## Getting Started
+## Contexte
 
-First, run the development server:
+L'entreprise souhaite mettre en place un blog permettant d'échanger sur des astuces et des informations avec
+le monde extérieur. Pour ça l'api a déjà été développée et vous devez fait l'application front.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Déroulé du projet (suggestion)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Faire le frontoffice de consultation des posts non connecté (une page qui liste les posts, et une page de
+   consultation). (GET /api/posts et GET /api/posts/{id})
+2. Mettre en place tous tests qui vous semble important (unitaire, e2e, etc...)
+3. Gérer l'authentification grâce au jwt token (POST /api/token)
+4. Faire le backoffice, crud administateur permettant de gérer les posts. (.... /api/posts...) et également leurs
+   transitions : (... /api/posts/../transition)
+5. Faire le backoffice, crud administateur permettant de gérer les users. (.... /api/users...)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Utilisation de l'api
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Toutes les informations du projet sont accessibles
+  ici : [https://tt-front.duplessy.eu/](https://tt-front.duplessy.eu/)
+- La documentation de l'api est accessible
+  ici : [https://tt-front.duplessy.eu/api/docs](https://tt-front.duplessy.eu/api/docs)
+  , également disponible au format json openapi
+  ici : [https://tt-front.duplessy.eu/api/docs.json](https://tt-front.duplessy.eu/api/docs.json)
+  et au format
+  redoc : [https://tt-front.duplessy.eu/api/docs?ui=re_doc](https://tt-front.duplessy.eu/api/docs?ui=re_doc)
+- Des fixtures peuvent êtres remises à zéro
+  ici : [https://tt-front.duplessy.eu/reset](https://tt-front.duplessy.eu/reset)
+- Dans les fixtures de bases ce trouvent deux utilisateurs qui seront toujours présent (le reste étant aléatoire) :
+  - email: admin@findly.co password: password
+  - email: user@findly.co password: password
+- Seul la récupération des posts et d'un post n'est accessible or connection. Pour les autres vous devrez inclure dans
+  votre requête un token jwt (Autorization: Bearer YOUR_TOKEN)
 
-## Learn More
+## Technologies autorisés
 
-To learn more about Next.js, take a look at the following resources:
+Tout langage, librairies sont autorisées, mais attention d'avoir des choix cohérents. La seule obligation est
+l'utilisation de Git pour le versionning.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Points importants:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Il n'est pas obligatoire de finir à 100% le projet
+- Ne pas hésiter à documenter son travail, pour que l'on puisse comprendre les intentions.
+- L'UX et l'UI du site sont en bonus
