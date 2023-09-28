@@ -1,5 +1,5 @@
 "use client";
-import { Get, GetId, Post } from "@/app/components/tools/axios";
+import { Get } from "@/app/components/tools/axios";
 import { PostContext } from "@/app/components/context/postProvider";
 import { useContext, useEffect } from "react";
 import Link from "next/link";
@@ -7,9 +7,14 @@ import Link from "next/link";
 const ShowPosts = () => {
   const { posts, setPosts } = useContext(PostContext);
 
+  useEffect(() => {
+    Get("posts").then((response) => {
+      setPosts(response.data);
+    });
+  }, []);
+
   return (
     <>
-      {<Get path="posts" />}
       <h1 className="text-xl text-red-500 text-center my-10 uppercase font-bold">
         Liste des posts
       </h1>
@@ -22,7 +27,7 @@ const ShowPosts = () => {
                 <h1>Titre : {post.title}</h1>
                 <h2>Status : {post.state}</h2>
                 <h3>Créé le : {post.createdAt}</h3>
-                <Link href={`/posts/${post.id}`}>Hello</Link>
+                <Link href={`/posts/${post.id}`}>En savoir plus</Link>
               </div>
             </div>
           );

@@ -1,5 +1,5 @@
 "use client";
-const { useState, createContext } = require("react");
+import { createContext, useState } from "react";
 
 export const PostContext = createContext();
 

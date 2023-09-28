@@ -6,7 +6,10 @@ export const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
     email: "",
-    password: "",
+    roles: [""],
+    plainPassword: "",
+    surname: "",
+    token: "",
   });
 
   return (
