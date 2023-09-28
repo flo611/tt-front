@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import Posts from "./sections/posts";
 import Users from "./sections/users";
+import { FcHome } from "react-icons/fc";
+
 
 const Admin = () => {
   const [showFields, setShowFields] = useState({
@@ -12,7 +14,12 @@ const Admin = () => {
 
   return (
     <>
-      <h1 className="uppercase text-center my-6 font-bold">Hello Admin</h1>
+      <button className="flex w-full justify-center text-4xl">
+        <a href="http://localhost:3000/">
+          <FcHome />
+        </a>
+      </button>
+      <h1 className="uppercase text-center my-6 font-bold text-2xl">Hello Admin</h1>
       <div className="grid grid-cols-4">
         <div className="flex flex-col">
           <button
