@@ -6,7 +6,7 @@ const ShowUser = () => {
   const { user, setUser } = useContext(UserContext);
   const [users, setUsers] = useState([]);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU4OTE4MjksImV4cCI6MTY5NTg5NTQyOSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.X4yaJBF-isCcNhzQdqv6ErW-1xLhLar8nwrC1BbvRK2l2IeSEEYwCI3bYkQowbAd7lsq4_ZS4GrXKVMIImQTaqvDFq71Vh7cUTJH58WkCPFSqwc5t_Tcj-gYkRir4IWxj29OWYfRiAMilP-diVqXJZPGqVYjLOkKQxkNvs_r7Arrua0-kpc39mMlClrCGpYd2nfYxW05c31RLHiKaoV2Df8e4MJsRQQUtMpO3d885A1htsi4BfwbWmzZ0Nzn87kl2x8NPnRnOU4CAnrEglYpZhL-z3OKZBbMK_DYlQ_BE2ud4VCzsN5WZcMBioJ-xhfTaLSE9-Zj2C471Hw2LgzoOA";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU5MTIzNjcsImV4cCI6MTY5NTkxNTk2Nywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.SiT2cxmXJdOrlTq51p4-etLOW6wPmPOt0FHGUZTihLnOg_IgJNX_3aLgigLcqbiT_GzGnJwrEPbtyuIv9IG4XEKkPmUz35xgLNYtW_SEMG7XlwV4Lg37VmUVTlo6BEr5NJOqHDdxJ-k7eNgjBrUINyye2xKqu3oDw8LiA9nICGLDMp5jKuGafgZr3kfQc-da4kBYuBwAqJTEiJfVCwf9rFicMugUF_GYJaLCcg8y-9HNnas4YGR2J5JVgALnz2pkZcsk7l5WgDJxlO6k38lDAKkVHNP1hHGXNOOGWvqrACm5wE5xybabrh3q4vsLHIjVmGMynOktsUrRE_DpaxT-XQ";
 
   const config = {
     headers: {
@@ -22,13 +22,10 @@ const ShowUser = () => {
 
   return (
     <section>
-      {users.length === 0 ? (
-        <div>"vide"</div>
-      ) : (
-        <div>
+     <div>
           <h1 className="text-center">
             Nombres d'utilisateurs :
-            <span className="font-bold"> {users.length}</span>
+            {/* <span className="font-bold"> {users.length}</span> */}
           </h1>
           {users.map((user) => {
             return (
@@ -51,7 +48,6 @@ const ShowUser = () => {
             );
           })}
         </div>
-      )}
     </section>
   );
 };
