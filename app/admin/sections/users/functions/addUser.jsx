@@ -14,8 +14,7 @@ const AddUser = () => {
     };
 
     const token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU4OTE4MjksImV4cCI6MTY5NTg5NTQyOSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.X4yaJBF-isCcNhzQdqv6ErW-1xLhLar8nwrC1BbvRK2l2IeSEEYwCI3bYkQowbAd7lsq4_ZS4GrXKVMIImQTaqvDFq71Vh7cUTJH58WkCPFSqwc5t_Tcj-gYkRir4IWxj29OWYfRiAMilP-diVqXJZPGqVYjLOkKQxkNvs_r7Arrua0-kpc39mMlClrCGpYd2nfYxW05c31RLHiKaoV2Df8e4MJsRQQUtMpO3d885A1htsi4BfwbWmzZ0Nzn87kl2x8NPnRnOU4CAnrEglYpZhL-z3OKZBbMK_DYlQ_BE2ud4VCzsN5WZcMBioJ-xhfTaLSE9-Zj2C471Hw2LgzoOA";
-
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU5NzU2MjAsImV4cCI6MTY5NTk3OTIyMCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.UKNG9Js5UiFkGukM9MsweD7FnYoMN0ekdP-FnN0sZuuNwlxjra5RuGeyhlPE28iBNZLaznZmvhpzhYKNYOJ2MxCC3QViLeVLYiCjNtOlSG57vct7DDnn56XACzeiKzl3d9h_Ub6xv31_V8JcXz5nL3XkOdcXCQsmlkjhDMhiA7vaMPPyC6iJXn8Pwcv834iq3b5wzSR74pO0g8OIeITfyIWhpb-ledjcLAmpRttr1yWUXulGaKMZo5HPF8rJTZ-gGxFx7mGIq6oqYAbdv_TDhlpKEi2st9xel9jUoM7u9-fWAJipI-B9MWDqYiD-jvxAxRd6j3WvuJ2ngFU0cw6gAg"
     const config = {
       headers: {
         // Authorization: `bearer ${user.token}`,

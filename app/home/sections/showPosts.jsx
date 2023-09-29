@@ -23,7 +23,7 @@ const ShowPosts = () => {
         {posts.map((post) => {
           return (
             <div key={post.id}>
-              <div className="flex flex-col items-center justify-center p-4 m-4">
+              <div className="flex flex-col items-center justify-center p-4 m-4 ">
                 <h1>Titre : {post.title}</h1>
                 <h2>Status : {post.state}</h2>
                 <h3>Créé le : {post.createdAt}</h3>
