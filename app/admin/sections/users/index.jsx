@@ -18,6 +18,7 @@ const Users = () => {
       <nav>
         <ul className="flex flex-row justify-around">
           <li
+          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: true,
@@ -30,6 +31,7 @@ const Users = () => {
             Afficher les utilisateurs
           </li>
           <li
+          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: false,
@@ -42,6 +44,7 @@ const Users = () => {
             Ajouter les utilisateurs
           </li>
           <li
+          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: false,
@@ -54,6 +57,7 @@ const Users = () => {
             Modifier les utilisateurs
           </li>
           <li
+          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: false,

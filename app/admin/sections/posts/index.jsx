@@ -14,8 +14,9 @@ const Posts = () => {
   return (
     <>
   <nav>
-        <ul className="flex flex-row justify-around">
+        <ul className="flex flex-row justify-around ">
           <li
+          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setPostFields({
                 AddPost: true,
@@ -26,6 +27,7 @@ const Posts = () => {
          Ajouter et Supprimer un post
           </li>
           <li
+          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setPostFields({
                 AddPost: false,

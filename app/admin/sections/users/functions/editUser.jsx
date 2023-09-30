@@ -1,7 +1,7 @@
 const EditUser = () => {
     return (
       <>
-        <h1>edit</h1>
+        <h1 className="underline text-center">edit</h1>
       </>
     );
   };

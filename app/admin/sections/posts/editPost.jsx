@@ -1,7 +1,7 @@
 const EditPost = () => {
     return (
       <>
-        <h1>Edit Post</h1>
+        <h1 className="text-center underline">Edit Post</h1>
       </>
     );
   };

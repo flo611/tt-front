@@ -12,7 +12,7 @@ const AddPost = () => {
   });
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU5NzU2MjAsImV4cCI6MTY5NTk3OTIyMCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.UKNG9Js5UiFkGukM9MsweD7FnYoMN0ekdP-FnN0sZuuNwlxjra5RuGeyhlPE28iBNZLaznZmvhpzhYKNYOJ2MxCC3QViLeVLYiCjNtOlSG57vct7DDnn56XACzeiKzl3d9h_Ub6xv31_V8JcXz5nL3XkOdcXCQsmlkjhDMhiA7vaMPPyC6iJXn8Pwcv834iq3b5wzSR74pO0g8OIeITfyIWhpb-ledjcLAmpRttr1yWUXulGaKMZo5HPF8rJTZ-gGxFx7mGIq6oqYAbdv_TDhlpKEi2st9xel9jUoM7u9-fWAJipI-B9MWDqYiD-jvxAxRd6j3WvuJ2ngFU0cw6gAg";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTYwNjI2MzMsImV4cCI6MTY5NjA2NjIzMywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.iO061FNZ99j9QXVl6CruzWSvL9oluirZuIo1cLCeF6ivLY715bHMdKOwT0iOvX9-Qy2QKaLqV9_GP9KUwraGj571s0m7ylslhoSLm8vbUQlE6EJZ0ImsAaSCgxx5o5uz3mCP1jGQ5KQTWwsd7tjOUQ7NnaV37vHRekxF63e0ukDIbI7KUH0V6NNnGiWzuI1c-yoDY08t0oh_KYwkNx8U-dA9U2paTZh6Hg-FDuV4-jtjxTV3irtSKKJR3YXnD5zGZ1OPcVFQtn46hx1OUnVqGPHwyPKrq7GJNoSTX5IDbvy38VwHJCOmL1pTPFJChNIubWP9fxapR2NrwC3yvclCUQ";
   const config = {
     headers: {
       Authorization: `beater ${token}`,
@@ -33,7 +33,7 @@ const AddPost = () => {
   return (
     <>
       <nav>
-        <ul className="flex flex-row justify-around">
+        <ul className="flex flex-row justify-around underline">
           <li>Suppression Post</li>
           <li>Ajout Post</li>
         </ul>

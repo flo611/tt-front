@@ -6,7 +6,7 @@ const ShowUser = () => {
   const { user, setUser } = useContext(UserContext);
   const [users, setUsers] = useState([]);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTU5NzU2MjAsImV4cCI6MTY5NTk3OTIyMCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.UKNG9Js5UiFkGukM9MsweD7FnYoMN0ekdP-FnN0sZuuNwlxjra5RuGeyhlPE28iBNZLaznZmvhpzhYKNYOJ2MxCC3QViLeVLYiCjNtOlSG57vct7DDnn56XACzeiKzl3d9h_Ub6xv31_V8JcXz5nL3XkOdcXCQsmlkjhDMhiA7vaMPPyC6iJXn8Pwcv834iq3b5wzSR74pO0g8OIeITfyIWhpb-ledjcLAmpRttr1yWUXulGaKMZo5HPF8rJTZ-gGxFx7mGIq6oqYAbdv_TDhlpKEi2st9xel9jUoM7u9-fWAJipI-B9MWDqYiD-jvxAxRd6j3WvuJ2ngFU0cw6gAg";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTYwNjk5MTMsImV4cCI6MTY5NjA3MzUxMywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.s-zYx0KrW6J-hNwv7Ee8eHrCNu5-oM6XLgzIA_lSvb_JLL_YyuzxubjKj_N1ILKgTO1AyhdDVa0WtALbrJfMFmM_q46fJcAe4tGva2M60_heEuEj-OiIqRZLmtZJbMVVGf234fWpBEagZDLDUxCqHnHceZ1t_xhcWH1tJGVG_qHRuE1GoxxGhcmGSz8ArsjNeT-q4LAZ-YogrEO6puNqCKcqdHr9uSHabm4RNWF2ELLz9ODNBCJ3m2C9kviNcDcV0hmscGQxJNKCcolp6iyy3LRdQ7kZM_KHHu9aBETbD_olwEuontWrBPeYDQfAIP0YETj6AhuD2fqSI_eJ5T-vHw";
 
   const config = {
     headers: {
@@ -23,7 +23,7 @@ const ShowUser = () => {
   return (
     <section>
       <div>
-        <h1 className="text-center">
+        <h1 className="text-center underline">
           Nombres d'utilisateurs :
           {/* <span className="font-bold"> {users.length}</span> */}
         </h1>

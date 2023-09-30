@@ -1,7 +1,7 @@
 const DeleteUser = () => {
   return (
     <>
-      <h1>delete</h1>
+      <h1 className="text-center underline">delete</h1>
     </>
   );
 };
