@@ -40,7 +40,7 @@ const Users = () => {
               });
             }}
           >
-            Afficher les utilisateurs
+            Afficher et Supprimer les utilisateurs
           </li>
           <li
             className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
@@ -68,7 +68,7 @@ const Users = () => {
           >
             Modifier les utilisateurs
           </li>
-          <li
+          {/* <li
             className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
@@ -80,7 +80,7 @@ const Users = () => {
             }}
           >
             Supprimer les utilisateurs
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className="my-8">

@@ -64,7 +64,10 @@ const AddPost = () => {
                   type="button"
                   value="Envoyer"
                   onClick={() =>
-                    Post("posts", data, config).then(() => alert("Post Crée !"))
+                    Post("posts", data, config).then(() =>{ alert("Post Crée !");
+                    window.location.reload();
+                  })
+                  
                   }
                 />
               </div>
@@ -87,9 +90,10 @@ const AddPost = () => {
                         className="bg-white text-red-600  justify-center items-center rounded-full px-6 py-2   hover:text-white hover:bg-red-900 "
                         type="button"
                         onClick={() =>
-                          Delete("posts", post.id, config).then(() =>
-                            alert("Post supprimé !")
-                          )
+                          Delete("posts", post.id, config).then(() =>{
+                            alert("Post supprimé !");
+                            window.location.reload();
+                          })
                         }
                       >
                         supprimer

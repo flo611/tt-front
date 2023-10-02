@@ -47,9 +47,10 @@ const ShowUser = () => {
                     value="Delete"
                     className=""
                     onClick={() =>
-                      Delete("users", user.id, config).then(() =>
-                        alert("Utilisateur supprimé !")
-                      )
+                      Delete("users", user.id, config).then(() =>{
+                        alert("Utilisateur supprimé !");
+                        window.location.reload();
+                       })
                     }
                   />
                 </div>

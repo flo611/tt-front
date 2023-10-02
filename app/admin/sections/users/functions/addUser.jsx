@@ -62,7 +62,7 @@ const AddUser = () => {
           />
         </div>
         <div className="flex justify-center pb-4">
-        <Button type="button" value="Envoyer" onClick={() =>SubmitForm()} />
+        <Button type="button" value="Envoyer" onClick={() =>{SubmitForm();window.location.reload();}} />
         </div>
         </div>
       </form>
