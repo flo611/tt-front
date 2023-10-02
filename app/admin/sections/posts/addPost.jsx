@@ -4,27 +4,34 @@ import { PostContext } from "@/app/components/context/postProvider";
 import { Get, Delete } from "@/app/components/tools/axios";
 import EditPost from "@/app/admin/sections/posts/editPost";
 import Button from "@/app/components/tools/button";
+import { UserContext } from "@/app/components/context/userProvider";
 
 const AddPost = () => {
+  const { user, setUser } = useContext(UserContext);
   const { posts, setPosts } = useContext(PostContext);
   const [newPost, setNewPost] = useState({
     title: "",
     content: "",
   });
-
-
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTYyMzAxMzEsImV4cCI6MTY5NjIzMzczMSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGZpbmRseS5jbyJ9.hHMcEM9I7NFV3KnTRTbwp3ovorW3YTXh9w6ytEzXM40XEY-k3NfC2u89qhizdJnTf23opfgG1JWoQIlJoWs72-kgI0EBxpA5J-PW2FLDgQhIXPpFYK2DqbXAWse0mVOluuZFVucsrwzkQUfMmFyiUQBPmOdfjPkhcj66rhFOovXeW2yyxbxyDuDjhUtBA3xHImr7RtQuDXlYmQty9LCwF8-hMVC4o5zRhG0Vza-wExdWbkUwiFbg7dGsJsVR06hPNW_w2eYxAKD9e8GTokVuKHnCqPgScM8IEHW_l8BJhIqIlWqqi37tpeJXA_l-i-_VnpfVSSDLpoqOTq7B_Q4VsA";
   const config = {
+   
     headers: {
-      Authorization: `bearer ${token}`,
+
+      Authorization: `bearer ${user.token}`,
     },
   };
 
   const data = {
     title: newPost.title,
     content: newPost.content,
+    email: user.email,
+    plainPassword: user.plainPassword,
   };
+  Post("users", data, config).then((response) => console.log(response));
+
+ 
+ 
+
 
   useEffect(() => {
     Get("posts", config).then((response) => {

@@ -1,15 +1,27 @@
 "use client";
 
+import { PostContext } from "@/app/components/context/postProvider";
 import AddPost from "./addPost";
 import EditPost from "./editPost";
-import { useState } from "react";
+import { useState, useEffect,useContext } from "react";
+import { UserContext } from "@/app/components/context/userProvider";
+import { Token } from "@/app/components/tools/token";
 
 const Posts = () => {
+  const { user, setUser } = useContext(UserContext);
   const [postFields, setPostFields] = useState({
     AddPost: false,
     EditPost: false,
-  });
 
+  });
+  useEffect(() => {
+    // console.log(user);
+    Token(user.email, user.plainPassword).then((response) =>
+      setUser({ ...user, token: response.data.token })
+    );
+    console.log(user);
+
+  }, []);
   return (
     <>
       <nav>

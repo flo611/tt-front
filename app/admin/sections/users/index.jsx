@@ -3,9 +3,12 @@ import ShowUser from "./functions/showUser";
 import AddUser from "./functions/addUser";
 import EditUser from "./functions/editUser";
 import DeleteUser from "./functions/deleteUser";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { UserContext } from "@/app/components/context/userProvider";
+import { Token } from "@/app/components/tools/token";
 
 const Users = () => {
+  const { user, setUser } = useContext(UserContext);
   const [userFields, setUserFields] = useState({
     showUser: false,
     addUser: false,
@@ -13,12 +16,21 @@ const Users = () => {
     deleteUser: false,
   });
 
+  useEffect(() => {
+    // console.log(user);
+    Token(user.email, user.plainPassword).then((response) =>
+      setUser({ ...user, token: response.data.token })
+    );
+    console.log(user);
+
+  }, []);
+
   return (
     <>
       <nav>
         <ul className="flex flex-row justify-around">
           <li
-          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
+            className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: true,
@@ -31,7 +43,7 @@ const Users = () => {
             Afficher les utilisateurs
           </li>
           <li
-          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
+            className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: false,
@@ -44,7 +56,7 @@ const Users = () => {
             Ajouter les utilisateurs
           </li>
           <li
-          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
+            className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: false,
@@ -57,7 +69,7 @@ const Users = () => {
             Modifier les utilisateurs
           </li>
           <li
-          className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
+            className="bg-white text-red-600 rounded-full px-10 py-2 hover:text-white hover:bg-red-900"
             onClick={() => {
               setUserFields({
                 showUser: false,
