@@ -17,7 +17,7 @@ const ShowUser = () => {
       Authorization: `bearer ${user.token}`,
     },
   };
-  Post("users", config).then((response) => console.log(response));
+
 
   useEffect(() => {
     Get("users", config).then((response) => {

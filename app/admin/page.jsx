@@ -15,15 +15,17 @@ const Admin = () => {
 
   return (
     <>
+    
       <button className="flex w-full justify-center text-4xl bg-red-900 py-6">
         <a href="http://localhost:3000/">
           <FcHome />
         </a>
       </button>
+      
       <h1 className="flex justify-center text-xl text-red-500  my-10 uppercase underline">
         Hello Admin
       </h1>
-      <div className="flex flex-col lg:grid lg:grid-cols-4">
+      <div className="flex flex-col lg:grid lg:grid-cols-4 ">
         <div className="flex flex-col">
           <Button
             type="button"
@@ -52,6 +54,7 @@ const Admin = () => {
           {showFields.users ? <Users /> : null}
         </div>
       </div>
+   
     </>
   );
 };

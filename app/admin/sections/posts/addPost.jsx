@@ -27,7 +27,7 @@ const AddPost = () => {
     email: user.email,
     plainPassword: user.plainPassword,
   };
-  Post("users", data, config).then((response) => console.log(response));
+
 
  
  
