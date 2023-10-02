@@ -29,7 +29,7 @@ const ShowUser = () => {
     <section>
       <div>
         <h1 className="text-center underline">
-          Nombres d'utilisateurs :
+          Nombres d&apos;utilisateurs :
       
         </h1>
         {users.map((user) => {
