@@ -23,7 +23,7 @@ const Admin = () => {
       <h1 className="flex justify-center text-xl text-red-500  my-10 uppercase underline">
         Hello Admin
       </h1>
-      <div className="grid grid-cols-4">
+      <div className="flex flex-col lg:grid lg:grid-cols-4">
         <div className="flex flex-col">
           <Button
             type="button"

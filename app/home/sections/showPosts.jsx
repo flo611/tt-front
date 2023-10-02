@@ -20,12 +20,12 @@ const ShowPosts = () => {
         Liste des posts
       </h1>
 
-      <div className="grid grid-cols-2 my-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:my-10">
         {posts.map((post) => {
           return (
             <div key={post.id}>
-              <div className="flex flex-col items-center text-white justify-center p-10 m-4 card mx-40 my-10">
-                <div className="contain py-10 px-10">
+              <div className="card flex flex-col m-4 p-8 items-center text-white justify-center md:mx-40  lg:p-10   lg:mx-40 lg:my-10">
+                <div className="p-6 contain md:p-10 lg:py-10 lg:px-10">
                   <h1>Titre : {post.title}</h1>
                   <h2>Status : {post.state}</h2>
                   <h3>Créé le : {post.createdAt}</h3>

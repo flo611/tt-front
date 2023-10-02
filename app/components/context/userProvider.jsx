@@ -5,9 +5,9 @@ export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
-    email: "",
+    email: "admin@findly.co",
     roles: [""],
-    plainPassword: "",
+    plainPassword: "password",
     surname: "",
     token: "",
   });
